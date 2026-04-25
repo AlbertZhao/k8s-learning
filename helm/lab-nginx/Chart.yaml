@@ -1,0 +1,6 @@
+apiVersion: v2
+name: lab-nginx
+description: A minimal nginx chart for local Kubernetes learning
+type: application
+version: 0.1.0
+appVersion: "1.27"

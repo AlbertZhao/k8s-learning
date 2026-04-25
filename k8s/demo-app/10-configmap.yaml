@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-config
+  namespace: lab-app
+data:
+  APP_TITLE: "K8S Local Lab"
+  APP_MESSAGE: "Hello from ConfigMap"

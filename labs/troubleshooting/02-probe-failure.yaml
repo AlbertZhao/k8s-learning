@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: probe-fail-demo
+  namespace: lab-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: probe-fail-demo
+  template:
+    metadata:
+      labels:
+        app: probe-fail-demo
+    spec:
+      containers:
+        - name: app
+          image: nginx:1.27
+          ports:
+            - containerPort: 80
+          livenessProbe:
+            httpGet:
+              path: /not-found
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
