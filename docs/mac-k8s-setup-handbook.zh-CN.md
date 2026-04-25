@@ -38,7 +38,7 @@
 在项目根目录执行：
 
 ```bash
-cd /Users/albert/Documents/DevTools/K8S
+cd ~/Documents/DevTools/K8S
 chmod +x scripts/*.sh
 ./scripts/00-bootstrap-macos.sh
 ```
